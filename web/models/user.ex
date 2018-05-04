@@ -6,7 +6,7 @@ defmodule Shblog.User do
     field :username, :string
     field :email, :string
     field :password_digest, :string
-
+    has_many :posts, Shblog.Post
     timestamps()
 
     field :password, :string, virtual: true

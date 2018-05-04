@@ -4,7 +4,7 @@ defmodule Shblog.Post do
   schema "posts" do
     field :title, :string
     field :body, :string
-
+    belongs_to :user, Shblog.User
     timestamps()
   end
 
