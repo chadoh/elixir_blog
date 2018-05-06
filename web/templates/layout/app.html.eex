@@ -17,15 +17,15 @@
         <nav role="navigation">
           <ul class="nav nav-pills pull-right">
             <li>
-        <%= if user = current_user(@conn) do %>
-          Logged in as
-          <strong><%= user.username %></strong>
-          <br>
-          <%= link "Log out", to: session_path(@conn, :delete, user.id), method: :delete %>
-        <% else %>
-          <%= link "Log in", to: session_path(@conn, :new) %>
-        <% end %>
-      </li>
+              <%= if user = current_user(@conn) do %>
+                Logged in as
+                <strong><%= user.username %></strong>
+                <br>
+                <%= link "Log out", to: session_path(@conn, :delete, user.id), method: :delete %>
+              <% else %>
+                <%= link "Log in", to: session_path(@conn, :new) %>
+              <% end %>
+            </li>
           </ul>
         </nav>
         <span class="logo"></span>
@@ -35,7 +35,7 @@
       <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
 
       <main role="main">
-        <%= render @view_module, @view_template, assigns %>
+      <%= render @view_module, @view_template, assigns %>
       </main>
 
     </div> <!-- /container -->
