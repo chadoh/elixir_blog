@@ -7,3 +7,4 @@ defmodule Shblog.Repo.Migrations.AddUserIdToPosts do
     end
     create index(:posts, [:user_id])
   end
+end
